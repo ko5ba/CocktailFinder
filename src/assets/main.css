@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .title {
+    @apply text-[2rem] font-medium  uppercase tracking-[0.2em];
+  }
+
+  .line {
+    @apply w-[5.21vw] h-[0.28vh] mt-8 mx-auto mb-0 bg-accent;
+  }
+
+  .info {
+    @apply py-[80px] px-0;
+  }
+
+  .wrapper {
+    @apply flex items-center justify-center;
+  }
+
+  .list {
+    @apply w-[560px] pt-12 py-0 pb-20 text-left;
+  }
+
+  .list-item {
+    @apply relative mb-5 pl-7;
+  }
+
+  .list-item:last-child {
+    @apply mb-0;
+  }
+
+  .list-item::before {
+    content: "";
+    @apply absolute top-[50%] left-0 transform -translate-y-1/2 bg-[url('/src/assets/img/heart.png')] bg-no-repeat bg-center w-4 h-4;
+  }
+
+  .instructions {
+    @apply w-[516p] mx-auto mt-0 mb-0 text-xl tracking-widest text-textMuted;
+  }
+}
